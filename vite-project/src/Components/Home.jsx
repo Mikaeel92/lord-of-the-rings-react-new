@@ -2,7 +2,12 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+        <img 
+        alt='cover' 
+        src='/src/assets/cover.webp'
+        className='w-full h-full object-cover'/>
+    </div>
   )
 }
 
