@@ -21,12 +21,12 @@ const Characters = () => {
             setErrorMsg(error)
         } 
     }
-    
+
     useEffect(() => {
         fetchApi()
     },[])
   return (
-    <div>
+    <div className='flex w-[500px]'>
             {loading && <div>Loading, Please Wait...</div>}
             {errorMsg && <div>Error: {errorMsg}</div>}
         {data.map((item, index) => (

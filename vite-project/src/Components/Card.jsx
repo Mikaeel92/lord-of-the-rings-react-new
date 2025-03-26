@@ -20,13 +20,14 @@ const Card = ({item}) => {
         if(item.realm) {
             fetchData()
         }
-
     }, [item.realm])
 
   return (
-    <div>
-        <h1>{item.name}</h1>
-        <p>{realmData ? realmData.name : null}</p>
+    <div className='bg-gray-200 shadow-lg rounded-lg p-4 m-4 w-64 text-center'>
+        <h1 className="text-xl font-bold text-gray-800">{item.name}</h1>
+        <p className="text-gray-700">{realmData ? realmData.name : null}</p>
+        <p>{item.height}</p>
+        <p>{item.hair_color}</p>
     </div>
   )
 }
