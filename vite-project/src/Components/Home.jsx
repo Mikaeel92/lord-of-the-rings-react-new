@@ -26,7 +26,7 @@ const Home = () => {
 
 
     if (data.length === 0) {
-        return <div>داده‌ای برای نمایش وجود ندارد.</div>
+        return <div>there is no data!</div>
     }
 
     const randomIndex = Math.floor(Math.random() * data.length)
@@ -37,11 +37,11 @@ const Home = () => {
     <div>
         <img 
         alt='cover' 
-        src='/src/assets/cover.webp'
+        src='/public/cover.webp'
         className='w-full h-full object-cover'/>
         {errorMsg && <di>{errorMsg}</di>}
         {loading && <div>data is loading...</div> }
-    <div className='bg-gray-200 shadow-lg rounded-lg p-4 m-4 w-64 text-center'>
+    <div className='bg-gray-200 shadow-lg rounded-lg p-4 m-4 w-64 text-center absolute top-1.5 left-1/2'>
         <h1 className="text-xl font-bold text-gray-800">{randomCharacter.name}</h1>
         <p>{randomCharacter.height}</p>
         <p>{randomCharacter.hair_color}</p>
